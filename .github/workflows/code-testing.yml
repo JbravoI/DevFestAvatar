@@ -1,0 +1,12 @@
+name: Code Testing
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Echo success message
+        run: echo "Code Testing......"
