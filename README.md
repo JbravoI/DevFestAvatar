@@ -82,7 +82,7 @@ Full documentation is in the [Wiki](https://github.com/olorunfemidavis/DevFestAv
 | - | ---- | ---- |
 | 1 | Olorunfemi Davis | Google Developer Expert / Lead Developer |
 | 2 | Babatunde Lamidi | Developer |
-| 3 | Ewuji John | Lead DevOps |
+| 3 | Ewuji John | Lead DevOps Engineer |
 | 4 | David Oluwabusayo | Developer |
 | 5 | Olajesu Benjamin | Developer |
 | 6 | Oluwaseyi Damilola | Quality Assurance |
