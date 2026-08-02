@@ -75,3 +75,14 @@ npm run deploy
 Contributions are welcome. Keep changes small, test the browser flow on mobile and desktop, and avoid committing generated local-only artifacts.
 
 Full documentation is in the [Wiki](https://github.com/olorunfemidavis/DevFestAvatar/wiki).
+
+## Contributors
+
+| # | Name | Role |
+| - | ---- | ---- |
+| 1 | Olorunfemi Davis | Google Developer Expert / Lead Developer |
+| 2 | Babatunde Lamidi | Developer |
+| 3 | Ewuji John | Lead DevOps |
+| 4 | David Oluwabusayo | Developer |
+| 5 | Olajesu Benjamin | Developer |
+| 6 | Oluwaseyi Damilola | Quality Assurance |
