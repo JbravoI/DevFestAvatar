@@ -200,9 +200,7 @@ function DownloadColor() {
           });
           window.trackColorUsage(currentColor);
         }
-        $("#share-section").removeAttr("hidden").addClass("glow");
-        $("#creator-stage-wrapper").removeClass("glow");
-        $(".color-btn").removeClass("glow");
+        $("#share-section").removeAttr("hidden");
         var shareElem = document.getElementById("share-section");
         if (shareElem && typeof shareElem.scrollIntoView === "function") {
           shareElem.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -258,13 +256,6 @@ function hideFramePicker() {
     $("#create-heading").text("Upload your photo");
   }
   $(".color-btn").removeClass("is-active");
-
-  // Step 1: Initial visit state
-  $("#tool-panel-wrapper").addClass("glow");
-  $("#upload-btn").addClass("glow");
-  $("#creator-stage-wrapper").removeClass("glow");
-  $(".color-btn").removeClass("glow");
-  $("#share-section").removeClass("glow");
 }
 
 function revealFramePicker() {
@@ -275,13 +266,6 @@ function revealFramePicker() {
   } else {
     $("#create-heading").text("Pick a color");
   }
-
-  // Step 2: Photo uploaded state
-  $("#tool-panel-wrapper").removeClass("glow");
-  $("#upload-btn").removeClass("glow");
-  $("#creator-stage-wrapper").addClass("glow");
-  $(".color-btn").addClass("glow");
-  $("#share-section").attr("hidden", true).removeClass("glow");
 }
 
 // Read and process uploaded file
