@@ -1,5 +1,32 @@
 {
   "projects": {
     "default": "devfestavatar"
+  },
+  "targets": {
+    "devfestavatar": {
+      "hosting": {
+        "2026": [
+          "devfestavatar"
+        ],
+        "2025": [
+          "devfestavatar-2025"
+        ],
+        "2024": [
+          "devfestavatar-2024"
+        ],
+        "2022": [
+          "devfestavatar-2022"
+        ],
+        "2021": [
+          "devfestavatar-2021"
+        ],
+        "2020": [
+          "devfestavatar-2020"
+        ],
+        "2019": [
+          "devfestavatar-2019"
+        ]
+      }
+    }
   }
 }

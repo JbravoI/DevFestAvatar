@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>#DevFest Avatar Creator</title>
+    <link rel="shortcut icon" href="https://res.cloudinary.com/gdgadoekiti/image/upload/v1568050119/gdg_nmwyzu.png" />
+    <meta name="theme-color" content="#23457C">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="DevFest Avatar">
+    <link rel="icon" sizes="192x192" href="images/dva192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DevFest Avatar">
+    <link rel="apple-touch-icon" href="images/dva152.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/dva144.png">
+    <meta name="msapplication-TileColor" content="#23457C">
+
+    <meta name="description" content="Create your #DevFest Avatar" />
+    <link rel="canonical" href="https://devfestavatar.firebaseapp.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#DevFest Avatar Creator" />
+    <meta property="og:description" content="Create your #DevFest Avatar" />
+    <meta property="og:url" content="https://devfestavatar.firebaseapp.com/" />
+    <meta property="og:site_name" content="#DevFest Avatar Creator" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Create your #DevFest Avatar" />
+    <meta name="twitter:title" content="Create your #DevFest Avatar" />
+
+    <link rel="stylesheet" href="css/site.css" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/solid.css"
+        integrity="sha384-qPldrzmea0i8jhonuql0da/kQWeaXdQl+krGXcTQUdRUGHcXBfSrBbZLbyMcCWcF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/brands.css"
+        integrity="sha384-qVnmyLTtnGPGEN3HDG2MCEOXWH1Yk/i70lKRuV+gMCDQg+jblQlFGPf1mejWUyYG" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/fontawesome.css"
+        integrity="sha384-hM7EQerc09E4O3zhtvF2iqcB4ZkEu9xkLQndhXdGGCEJ/sB4JK54SuKGmIC35UTf" crossorigin="anonymous">
+    <link href="css/loading.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="css/cropme.css" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WRNMXXW');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="mother">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRNMXXW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+    <div class="dialog-mask collapse">
+        <div class="dialog-status">
+            <div class="dialog-status-container">
+                <div class="progress-ring progress-large">
+                    <div class="progress-circle"></div>
+                    <div class="progress-circle"></div>
+                    <div class="progress-circle"></div>
+                    <div class="progress-circle"></div>
+                    <div class="progress-circle"></div>
+                </div>
+                <span class="dialog-status-message"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <main role="main" style="max-width:100%; margin: 0 auto;">
+            <h3 class="funfun component-catalog-panel__header-elements mdc-typography--headline3">#DevFest Avatar
+                Creator
+                <button class="mdc-icon-button material-icons" aria-describedby="tooltip-1">info</button></h3>
+
+            <em class="funfun">Share your creations on Twitter with the Hashtag #DevFest.</em>
+            <div style="background: transparent;">
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell">
+                            <div id="tocrop"></div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div>
+                                <h3 class="mdc-typography--subtitle1 funfun">Select Colour</h3>
+
+                                <div class="cc-selector">
+                                    <input id="r1" type="radio" name="shaper" value="bg" />
+                                    <label class="avatar-cc r1" for="r1"></label>
+
+                                    <input id="r2" type="radio" name="shaper" value="gy" checked />
+                                    <label class="avatar-cc r2" for="r2"></label>
+
+                                    <input id="r3" type="radio" name="shaper" value="yb" />
+                                    <label class="avatar-cc r3" for="r3"></label>
+
+                                    <input id="r4" type="radio" name="shaper" value="yr" />
+                                    <label class="avatar-cc r4" for="r4"></label>
+
+                                </div>
+                                <div class="uploader row">
+                                    <input id="fileInput" name="upload" type="file" style="display: none;"
+                                        accept="image/*" />
+                                    <div class="v4_9">
+                                        <div class="v4_4 fileInput"></div>
+                                        <span class="v4_6 fileInput">Upload</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="v4_17" type="button" id="finalSubmit">
+                                        <div class="v4_12">
+                                            <i class="material-icons mdc-button__icon button">cloud_upload</i>
+                                        </div>
+                                        <span class="v4_11">Submit</span>
+                                    </div>
+                                </div>
+                                <div class="row olofofo">
+                                    <!-- <h3 class="mdc-typography--subtitle1"></h3> -->
+                                    <a target="_blank" class="uploader funfun"
+                                        href="https://twitter.com/intent/tweet?text=I%20just%20made%20my%20%23DevFest%20Avatar%21%20Join%20me%20in%20Celebrating%20the%20season%20with%20%40gdgadoekiti%20%40fzanyA.%0D%0ACreate%20yours%20at%20goo.gle%2Fdevfest-avatar">Tweet #DevFest</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-card__action-icons pamo">
+                        <a href="#" asp-action="Download" download id="downloadimg"
+                            class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded export"
+                            aria-pressed="false" aria-label="Download" download title="Download">
+                            <i class="fas fa-download"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <footer class="footer text-muted" style="max-width:1000px; margin: 0 auto;">
+                    <div class="container funfun">
+                        Made with ❤ by <a style="text-decoration: none; color: white;"
+                            href="https://gdg.community.dev/gdg-ado-ekiti">GDG Ado-Ekiti</a> | <a target="_blank"
+                            style="text-decoration: none; color: white;"
+                            href="https://sites.google.com/view/devfestavatarcreatorprivacy/home">Privacy</a>
+                    </div>
+                    <div class="container funfun" id="foot" style="line-height:0px; margin:5px">
+                    </div>
+                </footer>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="js/cropme.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+</body>
+
+</html>
